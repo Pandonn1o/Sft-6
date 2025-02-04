@@ -3,7 +3,7 @@ import path from 'path';
 
 export async function POST(req) {
     try {
-        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+        const timestamp = new Date().toISOString(); 
         const archiveName = `archive_${timestamp}.zip`;
         const dataDir = path.resolve(process.cwd(), 'data');
         const archivesDir = path.resolve(process.cwd(), 'archives');
